@@ -1,0 +1,25 @@
+{
+  "name": "js-pro-hoidanit",
+  "version": "1.0.0",
+  "description": "node js pro",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuongtuooo/nodejs-pro.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "cuong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuongtuooo/nodejs-pro/issues"
+  },
+  "homepage": "https://github.com/cuongtuooo/nodejs-pro#readme",
+  "dependencies": {
+    "express": "5.0.1"
+  }
+}
