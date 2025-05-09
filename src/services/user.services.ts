@@ -1,3 +1,5 @@
+import getConnection from "../config/database"
+
 const handleCreateUser = (
     fullName: string,
     email: string,
@@ -8,4 +10,8 @@ const handleCreateUser = (
     console.log(">>> insert  a new usser")
 }
 
-export { handleCreateUser };
+const getAllUser = async () => {
+    const connection = await getConnection();
+    return "cường đẹp trai"
+}
+export { handleCreateUser, getAllUser };
