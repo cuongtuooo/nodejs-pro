@@ -5,7 +5,6 @@ import { name } from "ejs";
 const getHomePage = async (req: Request, res: Response) => {
     //get user
     const users = await getAllUser();
-    console.log("check user: ", users);
     return res.render("home", {
         users: users
     });
@@ -25,4 +24,11 @@ const postCreateUserPage = async (req: Request, res: Response) => {
     return res.redirect("/");
 }
 
-export { getHomePage, getCreateUserPage, postCreateUserPage };
+const postDeleteUser = async (req: Request, res: Response) => {
+    // console.log(req.params.id);
+    const { id } = req.params;
+    return res.redirect("/");
+}
+
+
+export { getHomePage, getCreateUserPage, postCreateUserPage, postDeleteUser };
