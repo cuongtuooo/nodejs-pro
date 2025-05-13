@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { getAllUser, getUserById, handleCreateUser, handleDeleteUser } from "services/user.services";
+import { getAllUser, getUserById, handleCreateUser, handleDeleteUser, updateUserById } from "services/user.services";
 import { name } from "ejs";
 
 const getHomePage = async (req: Request, res: Response) => {
@@ -43,4 +43,12 @@ const getViewUser = async (req: Request, res: Response) => {
     });
 }
 
-export { getHomePage, getCreateUserPage, postCreateUserPage, postDeleteUser, getViewUser };
+const postUpdateUser = async (req: Request, res: Response) => {
+    const { id, fullName, email, address } = req.body;
+
+    //handle update
+    await updateUserById(id, fullName, email, address);
+    return res.redirect("/");
+}
+
+export { getHomePage, getCreateUserPage, postCreateUserPage, postDeleteUser, getViewUser, postUpdateUser };
